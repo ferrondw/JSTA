@@ -33,6 +33,18 @@
     //81 width txt interface
     //24 px ASCII interface // stats
 
+    static Character = `                        
+                    
+                    
+     @@@@@@@        
+    @@@@@@@@@       
+    @@@@@@@@@       
+       .*           
+     @@@@@@@        
+  @@@@@@@@@@@@@     
+ @@@@@@@@@@@@@@@    
+`;
+
    }
 
    module.exports = Art;
