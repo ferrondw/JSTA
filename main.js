@@ -1,43 +1,39 @@
 const readlineSync = require("readline-sync") // npm install readline-sync
-const Art = require("./art.js");
+const Story = require("./story.js");
+const Endings = require("./endings.js");
 
 console.clear();
-Introduction(); // dit start het hele verhaal
+PlayPart(0);
 
+async function PlayPart(index) {
+      const { text, choices } = Story[index];
 
-
-async function Introduction()
-{
-      var text = [
-            'Je opent je ogen, alles zo helder. Het voelt zo kil, knijpend en verward sta je op.',
-            'De bladeren vallen langzaam naast je neer terwijl je opstaat, spieren verkrampt, mond droog en moe.',
-            'Terwijl je opstaat, hoor je achter je bladeren kraken alsof er iemand zich verstopt',
-            'Vol met schrik begin je harder te ademen, jij denkt dat op wordt gemerkt.',
-            Art.Character,
-            'character, COOL HEEE >::DDD'
-        ]
-
-        for (const line of text)
-        {
-           console.log(line);
-           await new Promise(resolve => setTimeout(resolve, 1000)); // in ms: 1 seconde
-        }
-
-      var choices = [
-            'Ren weg',
-            'Doe alsof je dood bent',
-            'Kruip langzaam weg'
-      ]
-
-      var userAnswer = readlineSync.question('Wat wil je doen?\n', choices); // dit werkt nog niet voor een of andere reden
-
-      if(userAnswer == choices[0]){
-            //doe iets
+      for (const line of text) {
+            console.log(line);
+            await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second delay
       }
-      else if(userAnswer == choices[1]){
-            //doe iets anders
+
+      const choiceKeys = Object.keys(choices);
+      const userAnswer = readlineSync.keyInSelect(choiceKeys, 'Make your choice:\n');
+
+      const nextStoryPart = choices[choiceKeys[userAnswer]];
+
+      //check for endings
+      //ok explanation i check if the index of the choice is an int, if its not that means its an ending, i name an ending 'e' followed by an index. I slice the 'e' off the index, parse the int and then use that index for the endings in endings.js its not at all pretty but it works really well
+      if (!parseInt(nextStoryPart)) {
+            PlayEnding(parseInt(nextStoryPart.slice(1)));
+            return;
       }
-      else if(userAnswer == choices[2]){
-            //doe weer iets anders
+
+      //play the next part of the story based on the users choice
+      PlayPart(nextStoryPart);
+}
+
+async function PlayEnding(index) {
+      const text = Endings[index];
+
+      for (const line of text) {
+            console.log(line);
+            await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second delay
       }
 }
