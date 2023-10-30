@@ -3,19 +3,12 @@ const Story = require("./story.js");
 const Endings = require("./endings.js");
 const Art = require("./art.js");
 
-let sepcialEnding = Math.floor(Math.random() * 10);
-const lineTimeout = 1300; // in ms
+const WPMSpeed = 20; // change this to change the reading speed - a value of 20 is 3 seconds
+let lineTimeout;
 
 console.clear();
 
-if (sepcialEnding < 1) {
-      PlayEnding(2);
-}
-else {
-      console.log(Art.Title);
-      PlayPart(0); // begins the story
-}
-
+Start();
 
 async function PlayPart(index) {
       try {
@@ -27,7 +20,7 @@ async function PlayPart(index) {
             }
 
             const choiceKeys = Object.keys(choices);
-            const userAnswer = readlineSync.keyInSelect(choiceKeys, 'Make your choice:\n');
+            const userAnswer = readlineSync.keyInSelect(choiceKeys, '');
 
             const nextStoryPart = choices[choiceKeys[userAnswer]];
 
@@ -41,6 +34,8 @@ async function PlayPart(index) {
             PlayPart(nextStoryPart);
       }
       catch {
+            // something went wrong trying to play a story part
+            // this means there is a flaw in the story, something leads to nothing!
             console.log('Seems like a 4D wormhole sucked up the story, so it cannot continue!');
       }
 }
@@ -50,6 +45,18 @@ async function PlayEnding(index) {
 
       for (const line of text) {
             console.log(line);
-            await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second delay
+            await new Promise(resolve => setTimeout(resolve, lineTimeout));
       }
+}
+
+async function Start() {
+      lineTimeout = (60 / WPMSpeed) * 1000;
+
+      console.log(`Your text will be displayed at a speed that you can read at ${WPMSpeed} WPM.`);
+      console.log(`The delay between lines will be approximately ${lineTimeout.toFixed(1) / 1000} seconds.`);
+      console.log(`The story will begin in 3 seconds.`);
+      await new Promise(resolve => setTimeout(resolve, 3000));
+
+      console.log(Art.Title);
+      PlayPart(0);
 }
