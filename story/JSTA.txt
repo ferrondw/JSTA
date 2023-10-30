@@ -1,0 +1,36 @@
+15-20>> 0. Waking up with a headache - Look around what can help with the headache | Notice something glowing
+1. (0 - look around) you stumble around your room looking for - water | paracetamol
+2. (1 - either) You begin feeling better - Notice your room is a mess and clean up | Code your Text Adventure
+3. (2/22 - Code your text adventure) You begin feeling tired - keep working | go to bed | finish this small task
+e0 (bad). (3 - keep working) You became so fatigued you went into a coma, hearing everything as your body slowly fades to black
+4. (3 - finish small task) You begin feeling drowsy - Go to bed | Make a doctors appoinment
+5. (4 - doctors appoinment) You are at the doctors - explain you overworked | tell you dont know whats going on
+e1 (good). (5 - either) The doctor gives you medicine that made you feel less fatigued and overall more positive. You live a normal and happy life.
+6. (3/4 - go to bed) You wake up and begin coding, but find something in your room that glows, as you touch it you lose consiousness.
+7. You wake up in a kind of void, empty of everything and pitch black - Swim deeper into the void | Stay where you are, you think its safe here
+e2 (void). (7 - stay where you are) The void begins to chill you down as you slowly freeze to death
+8. (24 - swim deeper OR 7 - swim deeper) You see a door that is omniously glowing, you swim closer to it
+e3 (good). (8) Once you open the door you return back home in your room, life continous on normally from here.
+9. (0 - notice something glowing) You notice a big blue glowing orb in your room - touch it | inspect it
+10. (9 - touch it) you get transported to 10 minutes back, you see your younger self notice the orb only its red now - touch it again | leave it
+e4 (bad). (10 - touch it again) You get violently sucked into the orb making you to mush and dying
+e5 (time loop). (10 - leave it) As you see your younger self touch it, you realize the younger you will become you, thus creating a time loop. you remember every one of them until you go insane and cant do anything to stop it
+11. (9 - inspect it) You ponder the orb like a real wizard whilst seeing it attracts like a magnet! - call the police to investigate | slowly appouch the orb
+12. (11 - call the police) They tell you they can't handle this, it's too dangerous - play peek-a-boo with the orb | discuss with the police on what to do with the orb
+e6 (good). (12 - play peek-a-boo) the orb got scared and fled! It's gone now :O
+22. (12 - discuss with police) They say 'code 23... dire situation' and people in bomb vests clear away the orb with special magnets. Aftwards you remember you needed to begin with your text adventure for school! Quickly begin coding...
+13. (11 - slowly approuch the orb) As you get closer your head feels more and more dizzy, as you get decennia of divine knowledge pumped into your brain. - still get closer | stay a safe distance to get knowledge
+e7 (bad). (13 - still get closer OR 16 - still get closer) Your brain gets massively overloaded with the divine knowledge, you can't handle it and lose your sanity. Your last thoughts are something about the heart of an alien.
+14. (13 - stay at a safe distance) With all this new divine knowledge you have learned you can use the orb and make a time machine! - make and use it! | keep inching closer to get more knowledge on how to build it.
+15. (14 - make and use it!) As you enter the time machine, something fatal happens, you put in the wrong time coordinates and your heading for the wild west! - try to fix it | enjoy a cold cocktail on a beach chair
+e8 (bad). (15 - try to fix it) it seems like the time coordinates were already correct, the display just bugged out. As you facepalm the time machine implodes like a certain submachine and you perish from existence.
+23. (15 - enjoy a cocktail) the time coordinates were good, the display just bugged out. As you arrive at your destination you get merged with the younger you, beginning the story again with all the knowledge you gained. What choices will you make this time? - continue (back to 0)
+16. (14 - keep inching closer) Your headache gets a little bit worse, but you can just about handle it - still get a bit closer, you can get more knowledge! | it's enough, let's see what you know...
+17. (16 - its enough knowledge) You have learned how effectively make a really cool dashboard for the time machine, and build air conditioning into it! You use this to make an even better time machine! - use it | check the air conditioning | give it a good ol' smack
+e9 (bad). (17 - give it a smack) Seems like a screw was loose, the whole machine collapsed and exploded. Guess who got caught in the explosion? you.
+19. (17 - check the air conditioning) Seems like a screw was loose, good thing you checked it, otherwise it might have exploded! You also patch it up with ducktape! But on your voyage through time an alien comes visit you from the 4th dimenstion and bumps against your window, a crack formed. The alien says it can fix the window for 10 euro because he wants weed. - Let it fix the window | refuse, 10 euro is still 10 euro.
+24. (19 - refuse) You wake up in a kind of void, empty of everything and pitch black because your time machine exploded! - Swim deeper into the void
+20. (19 - let it fix the window) with the fixed window, the alien joined you back in time. He just chill like that. But the alien spilled a cocktail he brought with him on your orb! The alien with a poker face says "10 euro for weed, i will fix". - pay him the money | refuse to pay, you already gave him money!
+21. (20 - refuse to pay) The alien goes feral, he is severely addicted to weed. - kill the alien with a shotgun you had lying around | let him rampage, for only a foul will challenge a higher life form
+e10 (void). (21 - let him rampage) the alien, clearly frustated, throws you into the void, as you think about what you could have done differently, you slowly freeze to death.
+25. (21 - kill the alien) As you kill the alien, the time machine also gets damaged. With the alien's heart you fixed the orb, but you make a tear in the space-time contiuum by bringing an all knowing alien back in time, but fix it the rest of the ducktape you had from fixing the screw! As you get back, the ship gets lost in sea. The days go by camping and looking for your home, seeing how far you got back in time because of the time you lost trying to fix the orb with the alien's heart. Once you finally get back home you feel an aura. It's the orb. You can't breathe as you get merged with your younger self, with all this new knowledge, what choices will you make?
