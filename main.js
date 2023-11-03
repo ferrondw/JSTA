@@ -47,8 +47,12 @@ async function PlayEnding(index) {
       const text = Endings[index];
 
       for (const line of text) {
-            console.log(line);
-            await new Promise(resolve => setTimeout(resolve, lineTimeout));
+            for(const word of line.split('')){
+                  process.stdout.write(`${word}`);
+                  await new Promise(resolve => setTimeout(resolve, letterDelay * 1000));
+            }
+            process.stdout.write("\n")
+            await new Promise(resolve => setTimeout(resolve, sentenceDelay * 1000));
       }
 }
 
